@@ -30,3 +30,5 @@ players_stats = pd.read_html(StringIO(data.text),match = "Standard Stats ")
 
 
 players_stats[0].columns.droplevel()
+
+dkfkkf
