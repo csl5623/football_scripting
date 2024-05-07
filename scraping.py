@@ -39,6 +39,5 @@ for year in years:
     
 
 stats_df = pd.concat(all_stats)
-
 stats_df.to_csv("stats.csv")
 
