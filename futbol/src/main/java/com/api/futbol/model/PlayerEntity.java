@@ -4,8 +4,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "players")
 public class PlayerEntity {
     
     @Id
@@ -19,7 +21,7 @@ public class PlayerEntity {
     private String nationality;
 
     @Column
-    private int age;
+    private String age;
 
     @Column
     private String position;

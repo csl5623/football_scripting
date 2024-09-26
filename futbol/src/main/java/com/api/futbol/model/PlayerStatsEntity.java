@@ -4,8 +4,10 @@ import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.Table;
 
 @Entity
+@Table(name = "players_stats")
 public class PlayerStatsEntity {
 
     @Id
