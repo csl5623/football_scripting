@@ -6,13 +6,14 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "clubs")
+@Table(name = "club_table")
 public class ClubEntity {
     
     @Id
+    @Column(name = "club_id")
     private Long club_id;
 
-    @Column
+    @Column(name = "club_name")
     private String club_name;
 
 }

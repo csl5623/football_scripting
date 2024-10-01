@@ -2,34 +2,33 @@ package com.api.futbol.model;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "players")
+@Table(name = "players_table")
+@Data  
+@NoArgsConstructor
+@AllArgsConstructor  
+@Builder 
 public class PlayerEntity {
-    
     @Id
-    private Long player_id;
+    @Column(name = "player_id")
+    private Long playerId;
 
-    @Column
+    @Column(name = "player_name")
     private String name;
 
-    @Column
-
+    @Column(name = "nationality")
     private String nationality;
-
-    @Column
-    private String age;
-
-    @Column
-    private String position;
-
-    @JoinColumn(name ="club_id")
-    private ClubEntity club_id;
-
-    @JoinColumn(name = "season_id")
-    private SeasonEntity season_id;
 
 }

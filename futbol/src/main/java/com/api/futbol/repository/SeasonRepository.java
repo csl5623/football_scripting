@@ -1,12 +1,11 @@
 package com.api.futbol.repository;
 
-import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.api.futbol.model.PlayerEntity;
+import com.api.futbol.model.SeasonEntity;
 
 @Repository
-public interface PlayerRepository extends JpaRepository<PlayerEntity, Long> {
+public interface SeasonRepository extends JpaRepository<SeasonEntity,Long>  {
+    
 }
-
