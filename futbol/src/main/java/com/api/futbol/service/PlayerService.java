@@ -26,7 +26,7 @@ public class PlayerService {
 
     public List<PlayerEntity> findPlayerByNation(String country){
 
-        return playerRepository.findByNationality(country);
+        return playerRepository.findByNationalityIgnoreCase(country);
 
     }
 

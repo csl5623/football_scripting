@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.api.futbol.service.PlayerService;
 import com.api.futbol.service.PlayerService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import java.util.List;
@@ -25,12 +26,20 @@ public class PlayersController {
 
 
     @GetMapping("/all")
-    public ResponseEntity<Object> getMethodName() {
+    public ResponseEntity<Object> getAllPlayers() {
         List<PlayerEntity> result = this.playerService.findAll();
         return ResponseEntity.ok(result); 
        
 
     }
+
+    @GetMapping("/club")
+    public ResponseEntity<Object> getPayersByCountry(@RequestParam("country") String country) {
+        List<PlayerEntity> result = this.playerService.findPlayerByNation(country);
+        return ResponseEntity.ok(result); 
+       
+    }
     
+
     
 }
