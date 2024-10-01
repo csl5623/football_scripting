@@ -8,5 +8,9 @@ import com.api.futbol.model.PlayerEntity;
 
 @Repository
 public interface PlayerRepository extends JpaRepository<PlayerEntity, Long> {
+
+    public List<PlayerEntity> findByNationality(String name);
+
 }
+
 
