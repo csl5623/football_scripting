@@ -13,10 +13,7 @@ import java.util.List;
 public interface LaLigaStatsRepository extends JpaRepository<LaLigaStats,Long> {
     
    @Query("SELECT l FROM LaLigaStats l " +
-       "JOIN SeasonEntity s  " +
+       "JOIN l.seasonId s  " +
        "WHERE s.seasonName = :seasonName")
     public List<LaLigaStats> getStatsPerSeason(@Param("seasonName") String seasonName);
-
-
-
 }

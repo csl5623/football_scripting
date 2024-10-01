@@ -19,7 +19,9 @@ import lombok.Data;
 public class LaLigaStats {
 
     @Id
+    @Column(name = "id")
     private Long id;
+
     @Column(name = "player_name")
     private String playerName;
 
