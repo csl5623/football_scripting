@@ -10,9 +10,11 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
+import lombok.Data;
 
 
 @Entity
+@Data
 @Table(name = "la_liga_stats")
 public class LaLigaStats {
 

@@ -11,8 +11,8 @@ public class SeasonEntity {
     
     @Id
     @Column(name = "season_id")
-    private Long season_id;
+    private Long seasonId;
 
     @Column(name = "season_name")
-    private String season_name;
+    private String seasonName;
 }

@@ -11,9 +11,9 @@ public class ClubEntity {
     
     @Id
     @Column(name = "club_id")
-    private Long club_id;
+    private Long clubId;
 
     @Column(name = "club_name")
-    private String club_name;
+    private String clubName;
 
 }
