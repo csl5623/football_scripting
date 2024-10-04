@@ -29,6 +29,8 @@
 	<properties>
 		<java.version>11</java.version>
 	</properties>
+			 <!-- change to java 17 in mac-->
+
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -59,6 +61,8 @@
 			<artifactId>javax.persistence-api</artifactId>
 			<version>2.2</version>
 		</dependency>
+
+		 <!-- remove when working on macbook-->
 
 		<dependency>
 			<groupId>org.postgresql</groupId>
