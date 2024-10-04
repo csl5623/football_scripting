@@ -28,13 +28,21 @@ public class LaLigaStatsController {
     }
 
     @GetMapping("/season")
-    public ResponseEntity<Object> getMethodName(@RequestParam("year") String param) {
+    public ResponseEntity<Object> getPlayersBySeason(@RequestParam("year") String param) {
         
         List<LaLigaStats> result = this.statsService.getStatsPerSeason(param);
 
         return ResponseEntity.ok(result); 
-
     }
+
+    @GetMapping("/")
+
+    public ResponseEntity<Object> getAllStats(){
+
+        List<LaLigaStats> result = this.statsService.getAllStats();
+        return ResponseEntity.ok(result);
+    }
+
     
 
 }

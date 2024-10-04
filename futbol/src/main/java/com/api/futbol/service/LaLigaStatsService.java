@@ -22,5 +22,10 @@ public class LaLigaStatsService {
         return this.statsRepository.getStatsPerSeason(name);
     }
 
+    public List<LaLigaStats> getAllStats(){
+        return this.statsRepository.findAll();
+    }
+
+
 
 }
