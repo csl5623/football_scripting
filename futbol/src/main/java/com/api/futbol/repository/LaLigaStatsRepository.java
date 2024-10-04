@@ -16,4 +16,8 @@ public interface LaLigaStatsRepository extends JpaRepository<LaLigaStats,Long> {
        "JOIN l.seasonId s  " +
        "WHERE s.seasonName = :seasonName")
     public List<LaLigaStats> getStatsPerSeason(@Param("seasonName") String seasonName);
+
+
+    // get the average of all statistics for one club
+    public List<LaLigaStats> getStatsPerClubAverga(@Param("club") String club, @Param("season") String year);
 }
